@@ -1,7 +1,7 @@
 import type { NextPage } from 'next';
 import { useQuery } from '@tanstack/react-query';
 
-const Home: NextPage = ({ name }) => {
+const Home: NextPage = () => {
   const { error, data } = useQuery(['getHello'], () =>
     fetch('http://localhost:3333/').then((res) => res.json())
   );
